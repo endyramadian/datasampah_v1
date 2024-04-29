@@ -51,7 +51,7 @@ sektorsumbersampah = ['rumahtangga', 'perkantoran', 'pasar', 'perniagaan', 'fasi
 
 datasampahrumahtangga = datasampahprovinsi['rumahtangga'].sum()
 #print(datasampahrumahtangga)
-st.write('datasampahrumahtangga: ', datasampahrumahtangga)
+#st.write('datasampahrumahtangga: ', datasampahrumahtangga)
 
 #bikin dataframe baru
 jumlahsampah = pd.DataFrame(columns=['provinsi', 'jumlahsampah', 'kategorisampah'])
@@ -102,10 +102,10 @@ def plotBar(data, x, y, color):
     
     return fig, ax
 
-#jumlahsampah = jumlahsampah.sort_values(by = ['jumlahsampah'])
+jumlahsampah = jumlahsampah.sort_values(by = ['jumlahsampah'])
 #jumlahsampah = jumlahsampah.reset_index(drop=True)
 #fig1, ax1 = plotBar(data=jumlahsampah, x='kategorisampah', y='jumlahsampah', color='Purples')
-fig1, ax1 = plotBar(data=jumlahsampah, x='kategorisampah', y='jumlahsampah', color='Greens')
+fig1, ax1 = plotBar(data=jumlahsampah, x='kategorisampah', y='jumlahsampah', color='twilight')
 #-> di Spyder muncul di atas kanan, bagian plot
 
 #tampilkan plot grafik di streamlit
